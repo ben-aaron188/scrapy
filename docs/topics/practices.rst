@@ -150,8 +150,8 @@ Same example using :class:`~scrapy.crawler.CrawlerRunner`:
         # Your second spider definition
         ...
 
-    configure_logging({})
-    runner = CrawlerRunner({})
+    configure_logging()
+    runner = CrawlerRunner()
     runner.crawl(MySpider1)
     runner.crawl(MySpider2)
     d = runner.join()
@@ -175,8 +175,8 @@ Same example but running the spiders sequentially by chaining the deferreds:
         # Your second spider definition
         ...
 
-    configure_logging({})
-    runner = CrawlerRunner({})
+    configure_logging()
+    runner = CrawlerRunner()
 
     @defer.inlineCallbacks
     def crawl():
